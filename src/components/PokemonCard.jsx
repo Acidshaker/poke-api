@@ -12,6 +12,7 @@ const PokemonCard = ({ pokemon }) => {
 
   const handleClickPokemon = () => {
     navigate(`/pokedex/${dataPokemon?.id}`);
+    window.scroll(0, 0);
   };
 
   useEffect(() => {

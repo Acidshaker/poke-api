@@ -5,13 +5,11 @@ import HomeProtected from "./components/HomeProtected";
 import Pokedex from "./pages/Pokedex";
 import Pokemon from "./pages/Pokemon";
 import RouteProtected from "./components/RouteProtected";
-import Footer from "./layout/Footer";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Loader from "./components/Loader";
 import HomeTrainerMenu from "./pages/HomeTrainerMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { setLoadingGlobal } from "./store/slices/loader.slice";
-import Header from "./layout/Header";
 import PokemonLiked from "./pages/PokemonLiked";
 import FavPokemon from "./pages/FavPokemon";
 

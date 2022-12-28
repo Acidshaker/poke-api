@@ -20,6 +20,7 @@ const PokemonCardLiked = ({ id }) => {
 
   const handleClickPokemon = () => {
     navigate(`/liked-pokemons/${pokemon?.id}`);
+    window.scroll(0, 0);
   };
 
   return (

@@ -55,11 +55,17 @@ const Pokemon = () => {
   const handleClickPrev = () => {
     if (newId > 1) {
       setnewId(Number(newId) - 1);
+    } else {
+      setnewId(10249);
     }
   };
 
   const handleClickNext = () => {
-    setnewId(Number(newId) + 1);
+    if (newId === 10249) {
+      setnewId(1);
+    } else {
+      setnewId(Number(newId) + 1);
+    }
   };
 
   const handleClickBack = () => {
@@ -110,7 +116,7 @@ const Pokemon = () => {
               <i
                 onClick={handleClickLike}
                 className={`bx bxs-heart like__btn ${
-                  pokemonLike.includes(newId) ? "active__like" : ""
+                  pokemonLike.includes(dataPokemon?.id) ? "active__like" : ""
                 }`}
               ></i>
             </section>

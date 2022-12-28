@@ -77,6 +77,7 @@ const Pokedex = () => {
     } else {
       dispatch(setCurrentPageGlobal(lastPage[lastPage.length - 1]));
     }
+    window.scroll(0, 0);
   };
 
   const handleClickNextPage = () => {
@@ -85,6 +86,7 @@ const Pokedex = () => {
     } else {
       dispatch(setCurrentPageGlobal(currentPage + 1));
     }
+    window.scroll(0, 0);
   };
 
   const handleClickPrevBlock = () => {
@@ -93,6 +95,7 @@ const Pokedex = () => {
     } else {
       dispatch(setCurrentPageGlobal(currentBlockPages[0] - 1));
     }
+    window.scroll(0, 0);
   };
 
   const handleClickNextBlock = () => {
@@ -105,16 +108,18 @@ const Pokedex = () => {
         )
       );
     }
+    window.scroll(0, 0);
   };
 
   const handleClickNumPage = (num) => {
     dispatch(setCurrentPageGlobal(num));
+    window.scroll(0, 0);
   };
 
   return (
     <div>
       <Header />
-      <main className="pokedex__container">
+      <main id="pokedex" className="pokedex__container">
         <header className="pokedex__header--container">
           <h1 className="pokedex__title">Pokedex</h1>
           <p className="pokedex__description">
