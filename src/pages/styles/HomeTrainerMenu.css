@@ -19,6 +19,14 @@ body {
   height: 100vh;
 }
 
+.home__trainer {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .home-trainer__container {
   height: 100%;
   width: 100%;
