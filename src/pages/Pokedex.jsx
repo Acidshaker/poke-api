@@ -50,6 +50,7 @@ const Pokedex = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.namePokemon.value;
+    dispatch(setCurrentPageGlobal(1));
     setNamePokemon(name);
   };
 
