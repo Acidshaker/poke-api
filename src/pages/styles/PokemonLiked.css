@@ -1,0 +1,23 @@
+.pokemon-liked {
+  position: relative;
+}
+
+.pokemon-liked__container {
+  padding-bottom: 116px;
+}
+
+.pokemon-liked__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 1.5rem;
+  column-gap: 0.5rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+@media (max-width: 950px) {
+  .pokemon-liked__container {
+    padding-bottom: 216px;
+  }
+}
