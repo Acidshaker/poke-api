@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 
 const PokemonCardLiked = ({ id }) => {
   const [pokemon, setPokemon] = useState();
