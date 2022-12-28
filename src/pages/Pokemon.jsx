@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 import { setCurrentPageGlobal } from "../store/slices/currentPage.slice";
 import { setPokemonLikeGlobal } from "../store/slices/pokemonLiked.slice";
 import "./styles/Pokemon.css";
@@ -81,6 +82,7 @@ const Pokemon = () => {
 
   return (
     <div className="pokemon">
+      <Header />
       <main className="pokemon__container">
         <i onClick={handleClickBack} className="bx bx-x back__btn"></i>
         <section className="pokemon__nav">

@@ -50,43 +50,10 @@ function App() {
             path="/trainer-menu"
             element={loading ? <Loader /> : <HomeTrainerMenu />}
           />
-          <Route
-            path="/pokedex"
-            element={
-              <>
-                <Pokedex />
-              </>
-            }
-          />
-          <Route
-            path="/pokedex/:id"
-            element={
-              <>
-                <Header />
-                <Pokemon />
-              </>
-            }
-          />
-          <Route
-            path="/liked-pokemons"
-            element={
-              <>
-                <Header />
-                <PokemonLiked />
-                <Footer />
-              </>
-            }
-          />
-          <Route
-            path="/liked-pokemons/:id"
-            element={
-              <>
-                <Header />
-                <FavPokemon />
-                <Footer />
-              </>
-            }
-          />
+          <Route path="/pokedex" element={<Pokedex />} />
+          <Route path="/pokedex/:id" element={<Pokemon />} />
+          <Route path="/liked-pokemons" element={<PokemonLiked />} />
+          <Route path="/liked-pokemons/:id" element={<FavPokemon />} />
         </Route>
       </Routes>
     </div>

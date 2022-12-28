@@ -114,7 +114,6 @@ const Pokedex = () => {
   return (
     <div>
       <Header />
-
       <main className="pokedex__container">
         <header className="pokedex__header--container">
           <h1 className="pokedex__title">Pokedex</h1>
