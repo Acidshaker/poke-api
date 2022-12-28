@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ListPokemons from "../components/ListPokemons";
 import { blockPages } from "../helpers/paginationLogic";
+import Footer from "../layout/Footer";
 import { setCurrentPageGlobal } from "../store/slices/currentPage.slice";
 import "./styles/Pokedex.css";
 
@@ -158,6 +159,8 @@ const Pokedex = () => {
           <i className="bx bxs-chevrons-right"></i>
         </li>
       </ul>
+
+      <Footer />
     </main>
   );
 };

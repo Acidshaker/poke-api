@@ -19,11 +19,11 @@ const GenderForm = () => {
     <form className="form__select" onSubmit={handleSubmit}>
       <p className="input__gender--title">Select your gender:</p>
       <div className="input__radio--container">
-        <div>
+        <div className="select__container">
           <input type="radio" name="gender" id="male" value="male" required />
           <p className="input__select">Male</p>
         </div>
-        <div>
+        <div className="select__container">
           <input
             type="radio"
             name="gender"

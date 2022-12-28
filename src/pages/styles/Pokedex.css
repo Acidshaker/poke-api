@@ -8,6 +8,13 @@ html {
   background-color: white;
   font-family: "Poppins", sans-serif;
   background-image: url("/images/main_bg.png");
+  height: auto;
+}
+
+.App,
+#root {
+  height: auto;
+  position: relative;
 }
 
 .pokedex__header--container {
@@ -32,6 +39,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .pokemon__list--container {
@@ -41,8 +49,8 @@ html {
   row-gap: 1.5rem;
   column-gap: 0.5rem;
   align-items: center;
-  margin: 1rem auto 100px auto;
   padding-top: 1rem;
+  /* height: calc(100vh - 232px); */
 }
 
 .pokemon-card__container {
@@ -50,6 +58,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   background-color: transparent;
+  font-size: 14px;
 }
 
 .pokemon-card__content {
@@ -191,6 +200,7 @@ html {
 }
 
 .pokedex__pagination--list {
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -203,6 +213,7 @@ html {
   border-radius: 30px;
   color: white;
   justify-items: center;
+  margin-bottom: 116px;
 }
 
 .pokedex__pagination--list > li {

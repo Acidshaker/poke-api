@@ -23,7 +23,6 @@ const Home = () => {
                 Now can you tell me your gender {nameTrainer}?
               </span>{" "}
             </p>
-            .
           </div>
         ) : (
           <div className="home__container--title">
