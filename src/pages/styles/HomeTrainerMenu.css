@@ -25,6 +25,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .home-trainer__container {
@@ -128,6 +129,10 @@ body {
 }
 
 @media (max-width: 690px) {
+  .home__trainer {
+    height: fit-content;
+  }
+
   .home-trainer__menu--container {
     flex-direction: column;
   }

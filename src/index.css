@@ -328,4 +328,14 @@ a {
   .menu__btn--hidden {
     display: none;
   }
+
+  .footer__container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 200px;
+  }
+
+  .about {
+    font-size: 16px;
+  }
 }
