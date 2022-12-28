@@ -12,6 +12,11 @@ h4 {
   --color-dark: #131b23;
 }
 
+.pokemon {
+  height: calc(100% - 32px);
+  position: relative;
+}
+
 .pokemon__container {
   background-color: white;
   display: flex;
@@ -19,6 +24,10 @@ h4 {
   justify-content: center;
   align-items: center;
   position: relative;
+  height: fit-content;
+  width: 98%;
+  margin: 0 auto;
+  /* margin-bottom: 100px; */
 }
 
 .pokemon__container--content {
@@ -78,6 +87,8 @@ h4 {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .pokemon__info--container {
@@ -106,7 +117,7 @@ h4 {
   justify-content: center;
   align-items: center;
   padding: 0 25px 0 25px;
-  margin-bottom: 116px;
+  margin-bottom: 1rem;
 }
 
 .pokemon__stats--title {
@@ -198,6 +209,23 @@ h4 {
 
 .active__like {
   color: var(--color-primary);
+}
+
+@media (max-width: 950px) {
+  .pokemon {
+    height: calc(100% + 68px);
+  }
+}
+
+@media (max-width: 810px) {
+  .pokemon {
+    height: calc(100% + 150px);
+  }
+}
+@media (max-width: 275px) {
+  .pokemon__stat--name {
+    font-size: 14px;
+  }
 }
 
 .bg-lg-normal {
