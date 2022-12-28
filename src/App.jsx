@@ -54,7 +54,6 @@ function App() {
             path="/pokedex"
             element={
               <>
-                <Header />
                 <Pokedex />
               </>
             }

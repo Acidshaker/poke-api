@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ListPokemons from "../components/ListPokemons";
 import { blockPages } from "../helpers/paginationLogic";
 import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 import { setCurrentPageGlobal } from "../store/slices/currentPage.slice";
 import "./styles/Pokedex.css";
 
@@ -111,57 +112,61 @@ const Pokedex = () => {
   };
 
   return (
-    <main className="pokedex__container">
-      <header className="pokedex__header--container">
-        <h1 className="pokedex__title">Pokedex</h1>
-        <p className="pokedex__description">
-          Welcome <span>{nameTrainer}</span>, here you can find your favorite
-          pokemon
-        </p>
-        <form onSubmit={handleSubmit} className="pokedex__form">
-          <div className="pokedex__search">
-            <input type="text" id="namePokemon" className="pokedex__input" />
-            <button className="pokedex__btn--search">Search</button>
-          </div>
-          <select onChange={handleChangeSelect} className="pokedex__select">
-            <option value="">All pokemons</option>
-            {types.map((type) => (
-              <option value={type.name} key={type.url}>
-                {type.name}
-              </option>
-            ))}
-          </select>
-        </form>
-      </header>
-      <ListPokemons pokemons={arrayPages[currentPage - 1]} />
-      <ul className="pokedex__pagination--list">
-        <li onClick={handleClickPrevBlock}>
-          <i className="bx bxs-chevrons-left"></i>
-        </li>
-        <li onClick={handleClickPrevPage}>
-          <i className="bx bxs-chevron-left"></i>
-        </li>
-        {currentBlockPages?.map((currentBlockPage) => (
-          <li
-            className={`pokedex__pages ${
-              currentPage === currentBlockPage ? "active__page" : ""
-            }`}
-            onClick={() => handleClickNumPage(currentBlockPage)}
-            key={currentBlockPage}
-          >
-            {currentBlockPage}
-          </li>
-        ))}
-        <li onClick={handleClickNextPage}>
-          <i className="bx bxs-chevron-right"></i>
-        </li>
-        <li onClick={handleClickNextBlock}>
-          <i className="bx bxs-chevrons-right"></i>
-        </li>
-      </ul>
+    <div>
+      <Header />
 
-      <Footer />
-    </main>
+      <main className="pokedex__container">
+        <header className="pokedex__header--container">
+          <h1 className="pokedex__title">Pokedex</h1>
+          <p className="pokedex__description">
+            Welcome <span>{nameTrainer}</span>, here you can find your favorite
+            pokemon
+          </p>
+          <form onSubmit={handleSubmit} className="pokedex__form">
+            <div className="pokedex__search">
+              <input type="text" id="namePokemon" className="pokedex__input" />
+              <button className="pokedex__btn--search">Search</button>
+            </div>
+            <select onChange={handleChangeSelect} className="pokedex__select">
+              <option value="">All pokemons</option>
+              {types.map((type) => (
+                <option value={type.name} key={type.url}>
+                  {type.name}
+                </option>
+              ))}
+            </select>
+          </form>
+        </header>
+        <ListPokemons pokemons={arrayPages[currentPage - 1]} />
+        <ul className="pokedex__pagination--list">
+          <li onClick={handleClickPrevBlock}>
+            <i className="bx bxs-chevrons-left"></i>
+          </li>
+          <li onClick={handleClickPrevPage}>
+            <i className="bx bxs-chevron-left"></i>
+          </li>
+          {currentBlockPages?.map((currentBlockPage) => (
+            <li
+              className={`pokedex__pages ${
+                currentPage === currentBlockPage ? "active__page" : ""
+              }`}
+              onClick={() => handleClickNumPage(currentBlockPage)}
+              key={currentBlockPage}
+            >
+              {currentBlockPage}
+            </li>
+          ))}
+          <li onClick={handleClickNextPage}>
+            <i className="bx bxs-chevron-right"></i>
+          </li>
+          <li onClick={handleClickNextBlock}>
+            <i className="bx bxs-chevrons-right"></i>
+          </li>
+        </ul>
+
+        <Footer />
+      </main>
+    </div>
   );
 };
 
