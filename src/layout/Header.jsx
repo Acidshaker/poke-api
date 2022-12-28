@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { setGenderTrainerGlobal } from "../store/slices/genderTrainer.slice";
 import { setLoadingGlobal } from "../store/slices/loader.slice";
 import { setNameTrainerGlobal } from "../store/slices/nameTrainer.slice";
+import { setPokemonLikeGlobalReset } from "../store/slices/pokemonLiked.slice";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ const Header = () => {
   const handleLogout = () => {
     dispatch(setNameTrainerGlobal(""));
     dispatch(setGenderTrainerGlobal(""));
+    dispatch(setPokemonLikeGlobalReset([]));
     dispatch(setLoadingGlobal(true));
   };
 

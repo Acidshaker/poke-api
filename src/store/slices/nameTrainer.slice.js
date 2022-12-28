@@ -5,7 +5,10 @@ const nameTrainerSlice = createSlice({
   initialState: localStorage.getItem("nameTrainer") ?? "",
   reducers: {
     //actions
-    setNameTrainerGlobal: (state, action) => action.payload,
+    setNameTrainerGlobal: (state, action) => {
+      localStorage.setItem("nameTrainer", action.payload);
+      return action.payload;
+    },
   },
 });
 

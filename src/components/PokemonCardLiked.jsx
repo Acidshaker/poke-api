@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Footer from "../layout/Footer";
 import Header from "../layout/Header";
 
 const PokemonCardLiked = ({ id }) => {
   const [pokemon, setPokemon] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const URL = `https://pokeapi.co/api/v2/pokemon/${id}/`;
@@ -17,7 +19,7 @@ const PokemonCardLiked = ({ id }) => {
   const types = pokemon?.types.map((type) => type.type.name).join("/");
 
   const handleClickPokemon = () => {
-    navigate(`/pokedex/${pokemon?.id}`);
+    navigate(`/liked-pokemons/${pokemon?.id}`);
   };
 
   return (

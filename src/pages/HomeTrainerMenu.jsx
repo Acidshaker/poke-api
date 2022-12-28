@@ -5,6 +5,7 @@ import { setNameTrainerGlobal } from "../store/slices/nameTrainer.slice";
 import { setGenderTrainerGlobal } from "../store/slices/genderTrainer.slice";
 import "./styles/HomeTrainerMenu.css";
 import { setLoadingGlobal } from "../store/slices/loader.slice";
+import { setPokemonLikeGlobalReset } from "../store/slices/pokemonLiked.slice";
 
 const HomeTrainerMenu = () => {
   const nameTrainer = useSelector((state) => state.nameTrainer);
@@ -24,6 +25,7 @@ const HomeTrainerMenu = () => {
   const handleLogout = () => {
     dispatch(setNameTrainerGlobal(""));
     dispatch(setGenderTrainerGlobal(""));
+    dispatch(setPokemonLikeGlobalReset([]));
     dispatch(setLoadingGlobal(true));
   };
 

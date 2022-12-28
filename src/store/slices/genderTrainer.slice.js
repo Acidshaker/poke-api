@@ -2,9 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const genderTrainerSlice = createSlice({
   name: "genderTrainer",
-  initialState: "",
+  initialState: localStorage.getItem("genderTrainer") ?? "",
   reducers: {
-    setGenderTrainerGlobal: (state, action) => action.payload,
+    setGenderTrainerGlobal: (state, action) => {
+      localStorage.setItem("genderTrainer", action.payload);
+      return action.payload;
+    },
   },
 });
 
