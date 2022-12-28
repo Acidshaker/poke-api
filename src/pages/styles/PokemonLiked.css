@@ -17,6 +17,21 @@
   padding-bottom: 82px;
 }
 
+.page__error {
+  height: calc(100vh - 232px);
+}
+
+.link__pokedex {
+  color: #3a7ff3;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.link__pokedex:hover {
+  color: #e26080;
+}
+
 @media (max-width: 950px) {
   .pokemon-liked__container {
     padding-bottom: 216px;

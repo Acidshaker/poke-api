@@ -74,14 +74,6 @@ const FavPokemon = () => {
     navigate("/liked-pokemons");
   };
 
-  // useEffect(() => {
-  //   if (pokemonLike.includes(newId)) {
-  //     document?.querySelector(".like__btn")?.classList?.add("active__like");
-  //   } else {
-  //     document?.querySelector(".like_btn")?.classList?.remove("active__like");
-  //   }
-  // }, [pokemonLike]);
-
   const handleClickLike = () => {
     dispatch(setPokemonLikeGlobal(newId));
   };
@@ -116,7 +108,7 @@ const FavPokemon = () => {
               <i
                 onClick={handleClickLike}
                 className={`bx bxs-heart like__btn ${
-                  pokemonLike.includes(newId) ? "active__like" : ""
+                  pokemonLike.includes(dataPokemon?.id) ? "active__like" : ""
                 }`}
               ></i>
             </section>
