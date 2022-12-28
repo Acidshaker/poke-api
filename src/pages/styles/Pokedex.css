@@ -50,7 +50,6 @@ html {
   column-gap: 0.5rem;
   align-items: center;
   padding-top: 1rem;
-  /* height: calc(100vh - 232px); */
 }
 
 .pokemon-card__container {

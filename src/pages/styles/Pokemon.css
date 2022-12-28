@@ -6,6 +6,14 @@ h4 {
   margin: 0;
 }
 
+body {
+  height: auto;
+}
+
+.App {
+  height: auto;
+}
+
 :root {
   --color-primary: #e26080;
   --color-secondary: #3a7ff3;
@@ -13,7 +21,7 @@ h4 {
 }
 
 .pokemon {
-  height: calc(100% - 32px);
+  height: fit-content;
   position: relative;
 }
 
@@ -27,7 +35,7 @@ h4 {
   height: fit-content;
   width: 98%;
   margin: 0 auto;
-  /* margin-bottom: 100px; */
+  padding-bottom: 116px;
 }
 
 .pokemon__container--content {
@@ -212,16 +220,16 @@ h4 {
 }
 
 @media (max-width: 950px) {
-  .pokemon {
-    height: calc(100% + 68px);
+  .pokemon__container {
+    padding-bottom: 226px;
   }
 }
 
-@media (max-width: 810px) {
+/* @media (max-width: 810px) {
   .pokemon {
     height: calc(100% + 150px);
   }
-}
+} */
 @media (max-width: 275px) {
   .pokemon__stat--name {
     font-size: 14px;
