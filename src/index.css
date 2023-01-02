@@ -23,18 +23,18 @@ body {
   transition: 0.5s;
 }
 
-/* .App {
-  height: 100%;
-  position: relative;
-  width: 100%;
-} */
+.App * {
+  animation: showing-items 1s ease;
+}
 
-/* .App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
+@keyframes showing-items {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
 
 #root {
   width: 100%;
