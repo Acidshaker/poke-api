@@ -14,13 +14,13 @@ const PokemonOptions = ({ currentNamePokemon, setCurrentNamePokemon }) => {
           if (
             res.data.results.filter(
               (pokemon) =>
-                pokemon.name.includes(currentNamePokemon) &&
-                pokemon.name !== currentNamePokemon
+                pokemon.name.includes(currentNamePokemon.toLowerCase()) &&
+                pokemon.name !== currentNamePokemon.toLowerCase()
             )
           ) {
             setPokemons(
               res.data.results.filter((pokemon) =>
-                pokemon.name.includes(currentNamePokemon)
+                pokemon.name.includes(currentNamePokemon.toLowerCase())
               )
             );
           }
