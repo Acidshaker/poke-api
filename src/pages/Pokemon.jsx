@@ -131,7 +131,7 @@ const Pokemon = () => {
           <section className="pokemon__features">
             <div className="pokemon__feature">
               <p className="pokemon__feature--name">Weight</p>
-              <p className="pokemon__feature--value">{dataPokemon?.weight}</p>
+              <p className={`pokemon__feature--value`}>{dataPokemon?.weight}</p>
             </div>
             <div className="pokemon__feature">
               <p className="pokemon__feature--name">Height</p>
@@ -143,7 +143,10 @@ const Pokemon = () => {
               <h4 className="pokemon__info--title">Types</h4>
               <div className="pokemon__info--data">
                 {dataPokemon?.types.map((type) => (
-                  <p className="pokemon__info--value" key={type.type.name}>
+                  <p
+                    className={`pokemon__info--value bg-${type.type.name}`}
+                    key={type.type.name}
+                  >
                     {type.type.name}
                   </p>
                 ))}

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ListPokemons from "../components/ListPokemons";
+import PokemonOptions from "../components/PokemonOptions";
 import { blockPages } from "../helpers/paginationLogic";
 import Footer from "../layout/Footer";
 import Header from "../layout/Header";
@@ -15,6 +16,7 @@ const Pokedex = () => {
   const [types, setTypes] = useState([]);
   const [namePokemon, setNamePokemon] = useState("");
   const [pokemonType, setPokemonType] = useState("");
+  const [currentNamePokemon, setCurrentNamePokemon] = useState("");
 
   const currentPage = useSelector((state) => state.currentPage);
   const dispatch = useDispatch();
@@ -52,6 +54,7 @@ const Pokedex = () => {
     const name = e.target.namePokemon.value;
     dispatch(setCurrentPageGlobal(1));
     setNamePokemon(name);
+    setPokemonType("");
   };
 
   const handleChangeSelect = (e) => {
@@ -117,6 +120,11 @@ const Pokedex = () => {
     window.scroll(0, 0);
   };
 
+  const handleChangePokemon = (e) => {
+    setCurrentNamePokemon(e.target.value);
+    console.log(currentNamePokemon);
+  };
+
   return (
     <div>
       <Header />
@@ -129,7 +137,19 @@ const Pokedex = () => {
           </p>
           <form onSubmit={handleSubmit} className="pokedex__form">
             <div className="pokedex__search">
-              <input type="text" id="namePokemon" className="pokedex__input" />
+              <div className="input__container--options">
+                <input
+                  onChange={handleChangePokemon}
+                  value={currentNamePokemon}
+                  type="text"
+                  id="namePokemon"
+                  className="pokedex__input"
+                />
+                <PokemonOptions
+                  currentNamePokemon={currentNamePokemon}
+                  setCurrentNamePokemon={setCurrentNamePokemon}
+                />
+              </div>
               <button className="pokedex__btn--search">Search</button>
             </div>
             <select onChange={handleChangeSelect} className="pokedex__select">

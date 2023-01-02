@@ -189,13 +189,43 @@ html {
   padding: 5px;
 }
 
+.input__container--options {
+  width: 90%;
+  max-width: 200px;
+  position: relative;
+}
+
 .pokedex__input {
   border-style: none;
   border: 1px solid black;
   padding: 10px;
-  width: 90%;
-  max-width: 300px;
+  width: 100%;
   border-radius: 10px;
+}
+
+.pokemon__option--list {
+  position: absolute;
+  max-height: 250px;
+  overflow: auto;
+  z-index: 5;
+  width: 100%;
+  background-color: rgba(19, 27, 35, 0.4);
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: solid 0.5px rgba(58, 127, 243, 0.8);
+  border-top: none;
+  font-size: 0.9rem;
+}
+
+.pokemon__option--item {
+  cursor: pointer;
+  transition: 0.5s;
+  border-bottom: solid 0.5px rgba(58, 127, 243, 0.8);
+}
+
+.pokemon__option--item:hover {
+  background-color: rgba(226, 96, 128, 0.8);
 }
 
 .pokedex__pagination--list {
