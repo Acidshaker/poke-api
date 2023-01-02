@@ -135,7 +135,10 @@ const FavPokemon = () => {
               <h4 className="pokemon__info--title">Types</h4>
               <div className="pokemon__info--data">
                 {dataPokemon?.types.map((type) => (
-                  <p className="pokemon__info--value" key={type.type.name}>
+                  <p
+                    className={`pokemon__info--value bg-${type.type.name}`}
+                    key={type.type.name}
+                  >
                     {type.type.name}
                   </p>
                 ))}
