@@ -23,7 +23,10 @@ body {
   transition: 0.5s;
 }
 
-.App * {
+.pokedex__container *,
+.pokemon__container *,
+.home__trainer *,
+.pokemon-liked__container * {
   animation: showing-items 1s ease;
 }
 
