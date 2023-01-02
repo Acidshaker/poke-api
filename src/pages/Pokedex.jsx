@@ -140,6 +140,7 @@ const Pokedex = () => {
               <div className="input__container--options">
                 <input
                   onChange={handleChangePokemon}
+                  autoComplete="off"
                   value={currentNamePokemon}
                   type="text"
                   id="namePokemon"
