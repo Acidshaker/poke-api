@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const pokemonLikeSlice = createSlice({
   name: "pokemonLike",
-  initialState: JSON.parse(localStorage.getItem("pokemonLike")) ?? [],
+  initialState: localStorage.getItem("pokemonLike")
+    ? JSON.parse(localStorage.getItem("pokemonLike"))
+    : [],
   reducers: {
     setPokemonLikeGlobal: (state, action) => {
       if ([...state].includes(Number(action.payload))) {
